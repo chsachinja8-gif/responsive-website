@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <div style="width: 20px; height: 20px; align-content: left;"> <a href="index.html"><button>home</button></a></div>
+    </nav>
+    <div id="d1">
+        
+    <h1 id="h1" class="sr">
+     <style>
+        #h1{
+            background: black;
+            color: aliceblue;
+            width: 200px;
+            height: 200px;
+        }
+     </style>
+    </h1>
+    <h2 id="h2" class="sr">
+     <style>
+        #h2{
+            background: skyblue;
+            color: aliceblue;
+            width: 200px;
+            height: 200px;
+        }
+     </style>
+    </h2>
+    <h3 id="h3" class="sr">
+     <style>
+        #h3{
+            background: red;
+            color: aliceblue;
+            width: 200px;
+            height: 200px;
+        }
+     </style>
+    </h3>
+    <h4 id="h4" class="sr">
+     <style>
+        #h4{
+            background: gray;
+            color: aliceblue;
+            width: 200px;
+            height: 200px;
+        }
+     </style>
+    </h4>
+     
+
+    
+    </div>
+</body>
+<script>
+    const h = document.querySelectorAll('.sr')
+    const body = document.querySelector('body')
+    h.forEach(function(e){
+        e.addEventListener('click',function(x){
+            body.style.backgroundImage = 'none';
+           if(x.target.id ==='h1'){
+            body.style.backgroundColor = 'black'
+        }
+            if(x.target.id === 'h2'){
+            body.style.backgroundColor = 'skyblue'
+        
+    }
+            if(x.target.id === 'h3'){
+            body.style.backgroundColor = 'red'
+
+        }
+            if(x.target.id === 'h4'){
+            body.style.backgroundColor = 'gray'
+        
+    }
+               })
+    })
+</script>
+</html>
