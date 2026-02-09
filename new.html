@@ -1,0 +1,48 @@
+<htmml>
+    <head>
+        
+        <title>
+            sachin
+        </title>
+    </head>
+    <body style="background-color: black; color: aliceblue;">
+        <nav>
+        <div style="width: 20px; height: 20px; align-content: left;"> <a href="index.html"><button>home</button></a></div>
+    </nav>
+   
+        <div class="center">
+            <div id="banner"><span>your locak time</span></div>
+            <div id="clock"></div>
+        </div>
+        <style>
+            .center{
+                display: flex;
+                height: 100vh;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+            }
+            #banner{
+                font-size: 30px;
+            }
+            #clock{
+                font-size: 40px;
+                background-color: orange;
+                padding: 20px 50px;
+                margin-top: 10px;
+                border-radius: 10px;
+            }
+        </style>
+        <script>
+            const clock = document.getElementById('clock')
+            const body = document.querySelector("body")
+            
+            setInterval(function(){
+                let date = new Date()
+                clock.innerHTML = date.toLocaleTimeString();
+
+            }, 1000)
+        </script>
+        
+    </body>
+</htmml>
